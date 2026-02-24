@@ -12,7 +12,7 @@ deposit(amount) - Увеличава balance с amount. Ако amount ≤ 0 → 
 withdraw(amount) - Намалява balance с amount само ако balance >= amount. Ако amount ≤ 0 или amount > balance→ извежда подходящо съобщение.
 getter за balance - Връща текущия баланс.`
 
-`Решение 1:`
+`Решение:`
 ```cpp
 #include <iostream>
 #include <cstring>
