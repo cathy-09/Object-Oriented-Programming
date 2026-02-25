@@ -440,3 +440,116 @@ int main()
 ```
 
 <hr style="border-width: 5px !important;">
+
+`Задача 6: Да се създаде клас Point2D, със следните полета:
+полета:
+double x
+double y
+и да се реализират:
+default конструктор
+конструктор с параметри
+деструктор
+print() const - извежда координатите на точката във формат (x, y)`
+
+`Решение:`
+```cpp
+#include <iostream>
+
+using std::cout;
+class Point2D
+{
+private:
+    double x;
+    double y;
+
+public:
+    Point2D()
+    {
+        this->x = 0;
+        this->y = 0;
+    }
+    Point2D(double x, double y)
+    {
+        this->x = x;
+        this->y = y;
+    }
+    ~Point2D()
+    {
+    }
+    void print() const
+    {
+        cout << "(" << x << ", " << y << ")";
+    }
+};
+
+void newLine()
+{
+    cout << std::endl;
+}
+
+int main()
+{
+    Point2D point1;
+    Point2D point2{ 1.1, 2.3 };
+    point1.print();
+    newLine();
+    point2.print();
+}
+```
+
+<hr style="border-width: 5px !important;">
+
+`Задача 7: Да се създаде клас Message, със следните полета:
+полета:
+char* text
+и да се реализират:
+default конструктор - задава text да е "no_text"
+конструктор с параметри
+деструктор
+print() const - извежда text`
+
+`Решение:`
+```cpp
+#include <iostream>
+
+void newLine();
+class Message
+{
+private:
+    char* text;
+
+public:
+    Message()
+    {
+        text = new char[8];
+        strcpy_s(text, 8, "no_text");
+    }
+    Message(const char* newText)
+    {
+        text = new char[strlen(newText) + 1];
+        strcpy_s(text, (strlen(newText) + 1), newText);
+    }
+    ~Message()
+    {
+        delete[] text;
+    }
+    void print() const
+    {
+        std::cout << text;
+        newLine();
+    }
+};
+void newLine()
+{
+    std::cout << std::endl;
+}
+int main()
+{
+    Message message1;
+    Message message2{ "Hello" };
+    message1.print();
+    message2.print();
+}
+```
+
+<hr style="border-width: 5px !important;">
