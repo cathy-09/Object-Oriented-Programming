@@ -115,3 +115,248 @@ int main()
 ```
 
 <hr style="border-width: 5px !important;">
+
+`Задача 2: Създайте структура Car, която съдържа в себе си име на марка с произволна дължина, година на създаване, максимална скорост и масив с произволна дължина, пазещ колко километра са били пътуванията на колата (цяло число). Трябва да имплементирате:
+Дефолтен конструктор
+Конструктор с параметрите на колата
+Деструктор (за да освободите динамичната памет, когато обектът умре)
+Функция за записване на колата във файл
+Функция, която прочита данни от файл
+Функция, която връща колко общо са изминатите километри на автомобила
+Функция, която връща големината на най-дългото пътуване`
+
+`Решение:`
+```cpp
+#include <iostream>
+#include <fstream>
+#include <cstring>
+
+struct Car
+{
+private:
+    char* brand;
+    int year;
+    int maxSpeed;
+    int* trips;
+    int tripsCount;
+
+public:
+    Car() 
+    {
+        brand = nullptr;
+        year = 0;
+        maxSpeed = 0;
+        trips = nullptr;
+        tripsCount = 0;
+    }
+
+    Car(const char* _brand, int _year, int _maxSpeed, int* _trips, int _tripsCount) 
+    {
+        this->year = _year;
+        this->maxSpeed = _maxSpeed;
+        this->tripsCount = _tripsCount;
+
+        this->brand = new char[strlen(_brand) + 1];
+        strcpy_s(brand, (strlen(_brand) + 1), _brand);
+
+        this->trips = new int[tripsCount];
+        for (int i = 0; i < tripsCount; i++) 
+        {
+            trips[i] = _trips[i];
+        }
+    }
+
+    ~Car() 
+    {
+        delete[] brand;
+        delete[] trips;
+    }
+
+    void saveToFile(const char* filename) const 
+    {
+        std::ofstream out(filename);
+
+        out << brand << std::endl;
+        out << year << std::endl;
+        out << maxSpeed << std::endl;
+        out << tripsCount << std::endl;
+
+        for (int i = 0; i < tripsCount; i++) 
+        {
+            out << trips[i] << " ";
+        }
+
+        out.close();
+    }
+
+    void readFromFile(const char* filename) 
+    {
+        std::ifstream in(filename);
+
+        delete[] brand;
+        delete[] trips;
+
+        char buffer[256];
+        in.getline(buffer, 256);
+
+        brand = new char[strlen(buffer) + 1];
+        strcpy_s(brand, (strlen(buffer) + 1), buffer);
+
+        in >> year;
+        in >> maxSpeed;
+        in >> tripsCount;
+
+        trips = new int[tripsCount];
+        for (int i = 0; i < tripsCount; i++) 
+        {
+            in >> trips[i];
+        }
+
+        in.close();
+    }
+
+    int getTotalKilometers() const
+    {
+        int sum = 0;
+        for (int i = 0; i < tripsCount; i++) 
+        {
+            sum += trips[i];
+        }
+        return sum;
+    }
+
+    int getLongestTrip() const
+    {
+        if (tripsCount == 0)
+        {
+            return 0;
+        }
+
+        int max = trips[0];
+        for (int i = 1; i < tripsCount; i++) 
+        {
+            if (trips[i] > max) 
+            {
+                max = trips[i];
+            }
+        }
+        return max;
+    }
+};
+
+int main() 
+{
+    int trips[] = { 120, 340, 560, 230 };
+
+    Car car1("Skoda", 2008, 200, trips, 4);
+
+    car1.saveToFile("car.txt");
+
+    Car car2;
+    car2.readFromFile("car.txt");
+
+    std::cout << "Total km: " << car2.getTotalKilometers() << std::endl;
+    std::cout << "Longest trip: " << car2.getLongestTrip() << std::endl;
+}
+```
+
+<hr style="border-width: 5px !important;">
+
+`Задача 3: `
+
+`Решение:`
+```cpp
+#include <iostream>
+#include <cstring>
+
+class Secret
+{
+private:
+    char* task;
+    char* password;
+    int loginFails;
+
+public:
+    Secret()
+    {
+        task = nullptr;
+        password = nullptr;
+        loginFails = 0;
+    }
+
+    Secret(const char* _task, const char* _password)
+    {
+        this->task = new char[strlen(_task) + 1];
+        strcpy_s(task, (strlen(_task) + 1), _task);
+
+        this->password = new char[strlen(_password) + 1];
+        strcpy_s(password, (strlen(_password) + 1), _password);
+
+        loginFails = 0;
+    }
+
+    ~Secret()
+    {
+        delete[] task;
+        delete[] password;
+    }
+
+    const char* getTask(const char* pwd)
+    {
+        if (strcmp(pwd, password) == 0)
+        {
+            return task;
+        }
+        loginFails++;
+        return "Wrong password!";
+    }
+
+    void setPassword(const char* newPassword, const char* oldPassword)
+    {
+        if (strcmp(oldPassword, password) == 0)
+        {
+            delete[] password;
+            password = new char[strlen(newPassword) + 1];
+            strcpy_s(password, (strlen(newPassword) + 1), newPassword);
+        }
+        else
+        {
+            loginFails++;
+        }
+    }
+
+    void setTask(const char* newTask, const char* pwd)
+    {
+        if (strcmp(pwd, password) == 0)
+        {
+            delete[] task;
+            task = new char[strlen(newTask) + 1];
+            strcpy_s(task, (strlen(newTask) + 1), newTask);
+        }
+        else
+        {
+            loginFails++;
+        }
+    }
+
+    int getLoginFails() const
+    {
+        return loginFails;
+    }
+};
+
+int main()
+{
+    Secret s("OOP exam task", "1234");
+    std::cout << s.getTask("1111") << std::endl;
+    std::cout << s.getTask("1234") << std::endl;
+    s.setPassword("abcd", "1234");
+    s.setTask("New OOP task", "abcd");
+    std::cout << s.getTask("abcd") << std::endl;
+    std::cout << "Login fails: " << s.getLoginFails() << std::endl;
+
+}
+```
+
+<hr style="border-width: 5px !important;">
+
