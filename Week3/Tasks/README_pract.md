@@ -5,16 +5,16 @@
 ## Задачи от седмица трета
 `Задача 1: Да се създаде клас MyPair, със следните полета и член-функции:
 полета: 
-int first,  
+int first, 
 int second
 член-функции:
 конструктор по подразбиране и с параметри (написани като един конструктор)
-getFirst(), 
-getSecond(), 
-setFirst(int a), 
-setSecond(int b), 
-swapElements() – разменя first и second, 
-printPair() – отпечатва (first, second), 
+getFirst(),
+getSecond(),
+setFirst(int a),
+setSecond(int b),
+swapElements() – разменя first и second,
+printPair() – отпечатва (first, second),
 maxElement() – връща по-голямата стойност от двата елемента.`
 
 `Решение:`
