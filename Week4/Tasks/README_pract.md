@@ -4,133 +4,265 @@
 
 ## Задачи от седмица четвърта
 ```
-Задача 1: Да се създаде клас MyPair, със следните полета и член-функции:
+Задача 1: ДДа се създаде клас UserAccount, със следните полета и член-функции:
 полета:
-- int first,
-- int second 
+- username
+- id
+- и още нещо :)
 член-функции:
-- конструктор по подразбиране и с параметри (написани като един конструктор)
-- getFirst(),
-- getSecond(),
-- setFirst(int a),
-- setSecond(int b),
-- swapElements() – разменя first и second,
-- printPair() – отпечатва (first, second),
-- maxElement() – връща по-голямата стойност от двата елемента.
+- конструктор по подразбиране (генериран от компилатора)
+- конструктор с параметри, приемащ потребителско име и идентификационен номер
+- статичен метод, който връща броя на акаунтите, създадени с подадени параметри (в тази задача ще приемаме, че при изтриване на акаунт, броят НЕ намалява)
+- деструктор (генериран от компилатора)
+- да се забрани копиращият конструктор
+- да се забрани оператор=
 ```
+
+> [!TIP]
+> Изпозвайте статична променлива за броя на създадените акаунти. (това е липсващата член-променлива :) )
+> 
+> За да използвате автоматичната реализация на специална член-функция от компилатора, може да използвате = default.
+> 
+> За да забраните използването на дадена специална член-функция (например копиращ конструктор или оператор =), използвайте = delete.
 
 `Решение:`
 
-`MyPair.h`
+`UserAccount.h`
 ```h
 #pragma once
-#include <iostream>
+#include <string>
 
-class MyPair
+class UserAccount
 {
 private:
-	int first;
-	int second;
+    std::string username;
+    int id;
+
+    static int accountsCount;
+
 public:
-	MyPair(int _first = 0, int _second = 0);
-	int getFirst() const;
-	int getSecond() const;
-	void setFirst(int a);
-	void setSecond(int b);
-	void swapElements();
-	void printPair() const;
-	int maxElement() const;
+    UserAccount() = default;
+
+    UserAccount(const std::string& username, int id);
+
+    static int getAccountsCount();
+
+    ~UserAccount() = default;
+
+    UserAccount(const UserAccount&) = delete;
+    UserAccount& operator=(const UserAccount&) = delete;
 };
 ```
 
-`MyPair.cpp`
+`UserAccount.cpp`
 ```cpp
-#include <iostream>
-#include "MyPair.h"
+#include "UserAccount.h"
 
-MyPair::MyPair(int _first, int _second)
+int UserAccount::accountsCount = 0;
+
+UserAccount::UserAccount(const std::string& username, int id)
 {
-	this->first = _first;
-	this->second = _second;
+	this->username = username;
+	this->id = id;
+
+	accountsCount++;
 }
 
-int MyPair::getFirst() const
+int UserAccount::getAccountsCount()
 {
-	return this->first;
-}
-
-int MyPair::getSecond() const
-{
-	return this->second;
-}
-
-void MyPair::setFirst(int a)
-{
-	this->first = a;
-}
-
-void MyPair::setSecond(int b)
-{
-	this->second = b;
-}
-
-void MyPair::swapElements()
-{
-	int temp = this->first;
-	this->first = this->second;
-	this->second = temp;
-}
-
-void MyPair::printPair() const
-{
-	std::cout << "(" << first << ", " << second << ")" << std::endl;
-}
-
-int MyPair::maxElement() const
-{
-	if (this->first > this->second)
-	{
-		return this->first;
-	}
-	else
-	{
-		return this->second;
-	}
+	return accountsCount;
 }
 ```
 
 `task1.cpp`
 ```cpp
 #include <iostream>
-#include "MyPair.h"
+#include "UserAccount.h"
 
 int main()
 {
-    MyPair pair1;
-    MyPair pair2{ 5,10 };
+    UserAccount u1("Anna", 1);
+    UserAccount u2("Ivan", 2);
+    UserAccount u3("John", 3);
 
-    pair1.printPair();
-    pair2.printPair();
-
-    pair1.setFirst(3);
-    pair1.setSecond(7);
-
-    pair1.printPair();
-
-    pair2.swapElements();
-    pair2.printPair();
-
-    std::cout << pair1.maxElement();
-    std::cout << std::endl;
-    std::cout << pair2.maxElement();
+    std::cout << UserAccount::getAccountsCount();
 }
-
 ```
 
 <hr style="border-width: 5px !important;">
 
 ```
-Задача 2: Да се създаде клас DynamicArray(примитивен std::vector), със следните полета и член-функции:
+Задача 2: Да се създаде клас StudentList, със следните полета и член-функции:
+полета:
+- studentsNames (динамичен масив от имената на студентите)
+- studentsCount
+- maxCapacity
+член-функции:
+- конструктор по подразбиране, който заделя масив за точно 10 имена (в тази задача масива няма да се resize-ва)
+- метод, който да принтира всички имена
+- метод, който да добавя име на края на списъка (само ако има място в масива, т.е. броят на имената в списъка е по-малък от 10)
+- метод, който да пренаписва име на дадена позиция в списъка (позицията трябва да бъде валидна)
+- помислете в тази задача дали трябва да се пише деструктор
+```
+
+> [!TIP]
+> помислете в тази задача дали трябва да се пише деструктор
+>ДА. Трябва да се напише деструктор тъй като се заделя динамична памет, която трябва да бъде освободена в края на жизнения цикъл на обекта, в противен случай ще се получи оттечка на памет.
+
+```
+Продължение на задачата:
+- Създайте обект sl1.
+- В sl1 добавете имената Anna, Ivan, John.
+- Създайте обект sl2.
+- Преравнете sl2 на sl1 (т.е. sl2 = sl1).
+- Принтирайте имената в sl1.
+- Променете второто име в sl2 на Maria.
+- Принтирайте имената в sl1 отново.
+```
+
+`Решение:`
+
+`StudentList.h`
+```h
+#pragma once
+#include <string>
+class StudentList
+{
+private:
+    std::string* studentsNames;
+    int studentsCount;
+    int maxCapacity;
+
+    void copyFrom(const StudentList& other);
+    void free();
+
+public:
+    StudentList();
+
+    StudentList(const StudentList& other);
+
+    StudentList& operator=(const StudentList& other);
+
+    ~StudentList();
+
+    void print() const;
+
+    void addStudent(const std::string& name);
+
+    void setStudent(int index, const std::string& name);
+};
+```
+
+`StudentList.cpp`
+```cpp
+#include "StudentList.h"
+#include <iostream>
+
+void StudentList::copyFrom(const StudentList& other)
+{
+    maxCapacity = other.maxCapacity;
+    studentsCount = other.studentsCount;
+
+    studentsNames = new std::string[maxCapacity];
+
+    for (int i = 0; i < studentsCount; i++)
+    {
+        studentsNames[i] = other.studentsNames[i];
+    }
+}
+
+void StudentList::free()
+{
+    delete[] studentsNames;
+}
+
+StudentList::StudentList()
+{
+    maxCapacity = 10;
+    studentsCount = 0;
+    studentsNames = new std::string[maxCapacity];
+}
+
+StudentList::StudentList(const StudentList& other)
+{
+    copyFrom(other);
+}
+
+StudentList& StudentList::operator=(const StudentList& other)
+{
+    if (this != &other)
+    {
+        free();
+        copyFrom(other);
+    }
+
+    return *this;
+}
+
+StudentList::~StudentList()
+{
+    free();
+}
+
+void StudentList::print() const
+{
+    for (int i = 0; i < studentsCount; i++)
+    {
+        std::cout << studentsNames[i] << std::endl;
+    }
+}
+
+void StudentList::addStudent(const std::string& name)
+{
+    if (studentsCount < maxCapacity)
+    {
+        studentsNames[studentsCount] = name;
+        studentsCount++;
+    }
+}
+
+void StudentList::setStudent(int index, const std::string& name)
+{
+    if (index >= 0 && index < studentsCount)
+    {
+        studentsNames[index] = name;
+    }
+}
+```
+
+`task2.cpp`
+```cpp
+#include <iostream>
+#include "StudentList.h"
+
+int main()
+{
+    StudentList sl1;
+
+    sl1.addStudent("Anna");
+    sl1.addStudent("Ivan");
+    sl1.addStudent("John");
+
+    StudentList sl2;
+
+    sl2 = sl1;
+
+    std::cout << "sl1:" << std::endl;
+    sl1.print();
+
+    sl2.setStudent(1, "Maria");
+
+    std::cout << "sl1 after change in sl2:" << std::endl;
+    sl1.print();
+}
+```
+
+<hr style="border-width: 5px !important;">
+
+`Задача 3: Добавете копиращ конструктор и оператор= към класовете, които имплементирахте на Практикум 3. (DynamicArray и MyStack)`
+
+```
+Задача 3.1: Да се създаде клас DynamicArray(примитивен std::vector), със следните полета и член-функции:
 полета:
 - int* data
 - size_t size
@@ -165,9 +297,15 @@ private:
     size_t size;
     size_t capacity;
     void resize(size_t newCapacity);
+    void copyFrom(const DynamicArray& other);
+    void free();
 
 public:
     DynamicArray(size_t initialCapacity = 2);
+
+    DynamicArray(const DynamicArray& other);
+    DynamicArray& operator=(const DynamicArray& other);
+
     ~DynamicArray();
     void push_back(int value);
     void pop_back();
@@ -194,6 +332,22 @@ DynamicArray::DynamicArray(size_t initialCapacity)
     capacity = initialCapacity;
 }
 
+DynamicArray::DynamicArray(const DynamicArray& other)
+{
+    copyFrom(other);
+}
+
+DynamicArray& DynamicArray::operator=(const DynamicArray& other)
+{
+    if (this != &other)
+    {
+        free();
+        copyFrom(other);
+    }
+
+    return *this;
+}
+
 DynamicArray::~DynamicArray() 
 {
     delete[] data;
@@ -209,6 +363,24 @@ void DynamicArray::resize(size_t newCapacity)
     delete[] data;
     data = newData;
     capacity = newCapacity;
+}
+
+void DynamicArray::copyFrom(const DynamicArray& other)
+{
+    size = other.size;
+    capacity = other.capacity;
+
+    data = new int[capacity];
+
+    for (size_t i = 0; i < size; i++)
+    {
+        data[i] = other.data[i];
+    }
+}
+
+void DynamicArray::free()
+{
+    delete[] data;
 }
 
 void DynamicArray::push_back(int value) 
@@ -311,13 +483,39 @@ int main()
 
     arr.set(10, 100);
     cout << "Element on index 10: " << arr.get(10) << endl;
+
+    cout << endl;
+    cout << "TEST COPY CONSTRUCTOR" << endl;
+
+    DynamicArray arr2 = arr;
+    arr2.set(0, 999);
+
+    cout << "arr: ";
+    arr.print();
+
+    cout << "arr2: ";
+    arr2.print();
+
+    cout << endl;
+    cout << "TEST OPERATOR =" << endl;
+
+    DynamicArray arr3;
+    arr3 = arr;
+
+    arr3.set(1, 777);
+
+    cout << "arr: ";
+    arr.print();
+
+    cout << "arr3: ";
+    arr3.print();
 }
 ```
 
 <hr style="border-width: 5px !important;">
 
 ```
-Задача 3: Да се създаде клас MyStack(ваша имплементация на std::stack, реализиран с масив), със следните полета и член-функции:
+Задача 3.2: Да се създаде клас MyStack(ваша имплементация на std::stack, реализиран с масив), със следните полета и член-функции:
 Стек - абстрактна структура от данни от линеен вид при която последователността на добавяне на елементи е точно обратната на последователността на извличане на елементи от нея (FILO).
 
 полета:
@@ -351,9 +549,13 @@ private:
     size_t currentSize;
     size_t capacity;
     void resize(size_t newCapacity);
+    void copyFrom(const MyStack& other);
+    void free();
 
 public:
     MyStack(size_t initialCapacity = 2);
+    MyStack(const MyStack& other);
+    MyStack& operator=(const MyStack& other);
     ~MyStack();
     void push(int value);
     void pop();
@@ -378,6 +580,22 @@ MyStack::MyStack(size_t initialCapacity)
     capacity = initialCapacity;
 }
 
+MyStack::MyStack(const MyStack& other)
+{
+    copyFrom(other);
+}
+
+MyStack& MyStack::operator=(const MyStack& other)
+{
+    if (this != &other)
+    {
+        free();
+        copyFrom(other);
+    }
+
+    return *this;
+}
+
 MyStack::~MyStack() 
 {
     delete[] data;
@@ -394,6 +612,25 @@ void MyStack::resize(size_t newCapacity)
     data = newData;
     capacity = newCapacity;
 }
+
+void MyStack::copyFrom(const MyStack& other)
+{
+    currentSize = other.currentSize;
+    capacity = other.capacity;
+
+    data = new int[capacity];
+
+    for (size_t i = 0; i < currentSize; i++)
+    {
+        data[i] = other.data[i];
+    }
+}
+
+void MyStack::free()
+{
+    delete[] data;
+}
+
 
 void MyStack::push(int value) 
 {
@@ -466,6 +703,56 @@ int main()
     stack.pop();
 
     cout << "Is empty: " << stack.empty() << endl; //1 is true
+}#include <iostream>
+#include "MyStack.h"
+using namespace std;
+
+int main()
+{
+    MyStack stack(2);
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+
+    cout << "Top element: " << stack.top() << endl;
+    cout << "Size: " << stack.size() << endl;
+
+    stack.pop();
+    cout << "Top after pop: " << stack.top() << endl;
+
+    stack.pop();
+    stack.pop();
+    stack.pop();
+
+    cout << "Is empty: " << stack.empty() << endl;
+    //1 is true
+
+    cout << endl;
+    cout << "TEST COPY CONSTRUCTOR" << endl;
+
+    MyStack s1;
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
+
+    MyStack s2 = s1;
+
+    s2.pop();
+
+    cout << "s1 top: " << s1.top() << endl;
+    cout << "s2 top: " << s2.top() << endl;
+
+    cout << endl;
+    cout << "TEST OPERATOR =" << endl;
+
+    MyStack s3;
+    s3 = s1;
+
+    s3.pop();
+
+    cout << "s1 top: " << s1.top() << endl;
+    cout << "s3 top: " << s3.top() << endl; 
 }
 ```
 
