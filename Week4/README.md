@@ -1,10 +1,8 @@
-# Week 2
+# Week 4
 > [!IMPORTANT]
 > Задачи и техните решения от семинарните упражнения можете да откриете тук:
->  [**Tasks**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week3/Tasks/README_sem.md)
+>  [**Tasks**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week4/Tasks/README_sem.md)
 
 > [!IMPORTANT]
 > Задачи и техните решения от практикума можете да откриете тук:
->  [**Tasks**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week3/Tasks/README_pract.md)
-
-<3
+>  [**Tasks**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week4/Tasks/README_pract.md)
