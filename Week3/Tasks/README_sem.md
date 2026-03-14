@@ -757,5 +757,16 @@ int main()
 }
 ```
 
-<hr style="border-width: 5px !important;">
+`Изход:`
+```
+Wrong password!
+Wrong password!
+Wrong password!
+Wrong password!
+OOP exam task
+New OOP exam task
+Login fails: 4
+New OOP exam task
+```
 
+<hr style="border-width: 5px !important;">
