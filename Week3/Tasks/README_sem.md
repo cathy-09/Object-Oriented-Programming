@@ -594,3 +594,168 @@ Name: Yoda, Age: 900, Power: 1000, Saber: GREEN SINGLE_BLADED
 
 <hr style="border-width: 5px !important;">
 
+```
+Задача 3 Серхо, подготвяйки задачите за контролното по ООП, реши, че е добра идея да внимава точно как пише задачите.
+Всеки можеше да отвори лаптопа му и да открадне тази безценна информация.
+Помогнете на Серхо да опази задачите от изпита - създайте клас secret.
+Класът трябва да съдържа:
+- Условие на задачата
+- Парола
+- Брой неуспешни влизания 
+Направете подходящи конструктори.
+Да се напише функция getTask(const char*pwd), която връща условието тогава и само тогава когато сме въвели правилната парола.
+Да се напише функция setPassword(const char* newPassword, const char* oldPassword), която променя паролата, но само ако сме въвели правилно старата парола.
+Да се напише функция setTask(const char* newTask, const char* passwd), която променя условието на задачата ако сме въвели правилна парола.
+Да се напише функция getLoginFails(), която връща броя на неуспешните влизания.Всеки път когато сме въвели неправилна парола броят на неуспешните влизания се увеличава. 
+```
+
+`Решение:`
+
+`Secret.h`
+```h
+#pragma once
+class Secret
+{
+	private:
+		char* task;
+		char* password;
+		int loginFails;
+public:
+	Secret();
+	Secret(const char* _task, const char* _password);
+	Secret(const Secret& other);
+	Secret& operator=(const Secret& other);
+	~Secret();
+	const char* getTask(const char* pwd);
+	void setPassword(const char* newPassword, const char* oldPassword);
+	void setTask(const char* newTask, const char* pwd);
+	int getLoginFails() const;
+};
+```
+
+`Secret.cpp`
+```cpp
+#define _CRT_SECURE_NO_WARNINGS
+#include "Secret.h"
+#include <string.h>
+
+static char* copyString(const char* src)
+{
+    if (!src)
+    {
+        return nullptr;
+    }
+    char* copy = new char[strlen(src) + 1];
+    strcpy(copy, src);
+    return copy;
+}
+
+Secret::Secret() : task(nullptr),
+password(nullptr), loginFails(0)
+{
+
+}
+
+Secret::Secret(const char* _task, const char* _password) : 
+    task(copyString(_task)),
+    password(copyString(_password)),
+    loginFails(0)
+{
+
+}
+
+Secret::Secret(const Secret& other) :
+    task(copyString(other.task)), 
+    password(copyString(other.password)), 
+    loginFails(other.loginFails)
+{
+
+}
+
+Secret& Secret::operator=(const Secret& other)
+{
+    if (this != &other)
+    {
+        delete[] task;
+        delete[] password;
+        task = copyString(other.task);
+        password = copyString(other.password);
+        loginFails = other.loginFails;
+    }
+    return *this;
+}
+
+Secret::~Secret()
+{
+    delete[] task;
+    delete[] password;
+}
+
+const char* Secret::getTask(const char* passwd)
+{
+    if (password && passwd && strcmp(passwd, password) == 0)
+    {
+        return task;
+    }
+    loginFails++;
+    return "Wrong password!";
+}
+
+void Secret::setPassword(const char* newPassword, const char* oldPassword)
+{
+    if (password && oldPassword && strcmp(oldPassword, password) == 0)
+    {
+        delete[] password;
+        password = copyString(newPassword);
+    }
+    else
+    {
+        loginFails++;
+    }
+}
+
+void Secret::setTask(const char* newTask, const char* pwd)
+{
+    if (password && pwd && strcmp(pwd, password) == 0)
+    {
+        delete[] task;
+        task = copyString(newTask);
+    }
+    else
+    {
+        loginFails++;
+    }
+}
+
+int Secret::getLoginFails() const
+{
+    return loginFails;
+}
+```
+
+`taskSecret.h`
+```cpp
+#include <iostream>
+#include "Secret.h"
+
+int main()
+{
+    Secret s("OOP exam task", "1234");
+
+    std::cout << s.getTask("1111") << std::endl;
+    std::cout << s.getTask("1211") << std::endl;
+    std::cout << s.getTask("1141") << std::endl;
+    std::cout << s.getTask("1219") << std::endl;
+    std::cout << s.getTask("1234") << std::endl;
+    s.setPassword("asd", "1234");
+    s.setTask("New OOP exam task", "asd");
+    std::cout << s.getTask("asd") << std::endl;
+    std::cout << "Login fails: " << s.getLoginFails() << std::endl;
+
+    Secret s2 = s;
+    std::cout << s2.getTask("asd") << std::endl;
+}
+```
+
+<hr style="border-width: 5px !important;">
+
