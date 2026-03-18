@@ -10,4 +10,5 @@
 - [**Week 2**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week2/README.md) - Енкапсулация. Абстракция. Член-функции. Getters и setters. Ключовата дума mutable.
 - [**Week 3**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week3/README.md) - Конструктори и деструктори. Разделна компилация.
 - [**Week 4**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week4/README.md) - Static. default и delete. Копиращ конструктор и оператор=.
-- [**Week 5**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week5/README.md) - 
+- [**Week 5**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week5/README.md) - Голяма четворка.
+- [**Week 6**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week6/README.md) -
