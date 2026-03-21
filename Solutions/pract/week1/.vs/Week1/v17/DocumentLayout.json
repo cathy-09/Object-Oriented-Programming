@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UniStaff\\OOP\\Week1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E15C40C-8DB4-4969-9A97-333A309B1194}|task9\\task9.vcxproj|D:\\UniStaff\\OOP\\Week1\\task9\\task9.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5E15C40C-8DB4-4969-9A97-333A309B1194}|task9\\task9.vcxproj|solutionrelative:task9\\task9.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B0D12D-A9F3-4F16-8C6A-A3E3F2AE51B0}|task8\\task8.vcxproj|D:\\UniStaff\\OOP\\Week1\\task8\\task8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F5B0D12D-A9F3-4F16-8C6A-A3E3F2AE51B0}|task8\\task8.vcxproj|solutionrelative:task8\\task8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA360879-894B-495B-BF83-4F0307FD77D5}|task7\\task7.vcxproj|D:\\UniStaff\\OOP\\Week1\\task7\\task7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BA360879-894B-495B-BF83-4F0307FD77D5}|task7\\task7.vcxproj|solutionrelative:task7\\task7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6B0EB1-18A4-43D8-8D38-4E9A9B03091B}|task6\\task6.vcxproj|D:\\UniStaff\\OOP\\Week1\\task6\\task6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF6B0EB1-18A4-43D8-8D38-4E9A9B03091B}|task6\\task6.vcxproj|solutionrelative:task6\\task6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F083E94-2B2F-426A-9B12-D796A384592D}|task5\\task5.vcxproj|D:\\UniStaff\\OOP\\Week1\\task5\\task5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F083E94-2B2F-426A-9B12-D796A384592D}|task5\\task5.vcxproj|solutionrelative:task5\\task5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00BF3CB4-74CD-4674-B064-BACD0CD1E122}|task4\\task4.vcxproj|D:\\UniStaff\\OOP\\Week1\\task4\\task4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{00BF3CB4-74CD-4674-B064-BACD0CD1E122}|task4\\task4.vcxproj|solutionrelative:task4\\task4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6145D16-1F20-4DBC-B7A2-708AAB3269BF}|task3\\task3.vcxproj|D:\\UniStaff\\OOP\\Week1\\task3\\task3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6145D16-1F20-4DBC-B7A2-708AAB3269BF}|task3\\task3.vcxproj|solutionrelative:task3\\task3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A48CEDDD-D16F-4CF5-B1C1-39CBC8355D3E}|task2\\task2.vcxproj|D:\\UniStaff\\OOP\\Week1\\task2\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A48CEDDD-D16F-4CF5-B1C1-39CBC8355D3E}|task2\\task2.vcxproj|solutionrelative:task2\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B45576AA-5B25-4759-9FF3-4AF36E02E52E}|task1\\task1.vcxproj|D:\\UniStaff\\OOP\\Week1\\task1\\task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B45576AA-5B25-4759-9FF3-4AF36E02E52E}|task1\\task1.vcxproj|solutionrelative:task1\\task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "task9.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task9\\task9.cpp",
+              "RelativeDocumentMoniker": "task9\\task9.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task9\\task9.cpp",
+              "RelativeToolTip": "task9\\task9.cpp",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAwwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T22:13:26.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "task8.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task8\\task8.cpp",
+              "RelativeDocumentMoniker": "task8\\task8.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task8\\task8.cpp",
+              "RelativeToolTip": "task8\\task8.cpp",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAwwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T22:07:05.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "task7.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task7\\task7.cpp",
+              "RelativeDocumentMoniker": "task7\\task7.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task7\\task7.cpp",
+              "RelativeToolTip": "task7\\task7.cpp",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T22:01:39.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "task6.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task6\\task6.cpp",
+              "RelativeDocumentMoniker": "task6\\task6.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task6\\task6.cpp",
+              "RelativeToolTip": "task6\\task6.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T21:57:25.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "task5.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task5\\task5.cpp",
+              "RelativeDocumentMoniker": "task5\\task5.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task5\\task5.cpp",
+              "RelativeToolTip": "task5\\task5.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAwwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T20:27:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "task4.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task4\\task4.cpp",
+              "RelativeDocumentMoniker": "task4\\task4.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task4\\task4.cpp",
+              "RelativeToolTip": "task4\\task4.cpp",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAwwIkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T20:24:58.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "task3.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task3\\task3.cpp",
+              "RelativeDocumentMoniker": "task3\\task3.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task3\\task3.cpp",
+              "RelativeToolTip": "task3\\task3.cpp",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAwwIMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-23T20:14:02.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "task2.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task2\\task2.cpp",
+              "RelativeDocumentMoniker": "task2\\task2.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task2\\task2.cpp",
+              "RelativeToolTip": "task2\\task2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-18T07:39:55.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "task1.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\Week1\\task1\\task1.cpp",
+              "RelativeDocumentMoniker": "task1\\task1.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\Week1\\task1\\task1.cpp",
+              "RelativeToolTip": "task1\\task1.cpp",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAwwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-18T06:42:09.074Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
