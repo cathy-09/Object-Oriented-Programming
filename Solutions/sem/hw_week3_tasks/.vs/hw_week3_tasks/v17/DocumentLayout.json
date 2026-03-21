@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UniStaff\\OOP\\hw_week3_tasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\taskNightClub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\taskNightClub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Nightclub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Narga.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Alchohol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Baloon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Nightclub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Alchohol.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Narga.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A281E14C-CEAE-47C3-AB45-734B2F6243ED}|taskNightClub\\taskNightClub.vcxproj|solutionrelative:taskNightClub\\Baloon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Nightclub.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.cpp",
+              "RelativeDocumentMoniker": "taskNightClub\\Nightclub.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.cpp",
+              "RelativeToolTip": "taskNightClub\\Nightclub.cpp",
+              "ViewState": "AgIAAAICAAAAAAAAAAAgwB4CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T15:23:11.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Nightclub.h",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.h",
+              "RelativeDocumentMoniker": "taskNightClub\\Nightclub.h",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Nightclub.h",
+              "RelativeToolTip": "taskNightClub\\Nightclub.h",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-14T15:17:06.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Alchohol.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.cpp",
+              "RelativeDocumentMoniker": "taskNightClub\\Alchohol.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.cpp",
+              "RelativeToolTip": "taskNightClub\\Alchohol.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T15:12:04.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Alchohol.h",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.h",
+              "RelativeDocumentMoniker": "taskNightClub\\Alchohol.h",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Alchohol.h",
+              "RelativeToolTip": "taskNightClub\\Alchohol.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-14T15:10:51.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Baloon.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.cpp",
+              "RelativeDocumentMoniker": "taskNightClub\\Baloon.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.cpp",
+              "RelativeToolTip": "taskNightClub\\Baloon.cpp",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T14:10:55.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Narga.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.cpp",
+              "RelativeDocumentMoniker": "taskNightClub\\Narga.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.cpp",
+              "RelativeToolTip": "taskNightClub\\Narga.cpp",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T14:04:03.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Narga.h",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.h",
+              "RelativeDocumentMoniker": "taskNightClub\\Narga.h",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Narga.h",
+              "RelativeToolTip": "taskNightClub\\Narga.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-14T13:58:51.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Baloon.h",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.h",
+              "RelativeDocumentMoniker": "taskNightClub\\Baloon.h",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\Baloon.h",
+              "RelativeToolTip": "taskNightClub\\Baloon.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-14T13:34:30.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "taskNightClub.cpp",
+              "DocumentMoniker": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\taskNightClub.cpp",
+              "RelativeDocumentMoniker": "taskNightClub\\taskNightClub.cpp",
+              "ToolTip": "D:\\UniStaff\\OOP\\hw_week3_tasks\\taskNightClub\\taskNightClub.cpp",
+              "RelativeToolTip": "taskNightClub\\taskNightClub.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T13:31:39.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
