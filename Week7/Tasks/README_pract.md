@@ -430,6 +430,3 @@ int main()
 ```
 
 <hr style="border-width: 5px !important;">
-
-
-<hr style="border-width: 5px !important;">
