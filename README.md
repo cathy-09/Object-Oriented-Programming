@@ -11,4 +11,5 @@
 - [**Week 3**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week3/README.md) - Конструктори и деструктори. Разделна компилация.
 - [**Week 4**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week4/README.md) - Static. default и delete. Копиращ конструктор и оператор=.
 - [**Week 5**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week5/README.md) - Голяма четворка.
-- [**Week 6**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week6/README.md) -Предефиниране на оператори. Приятелски функции. Тип auto
+- [**Week 6**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week6/README.md) - Предефиниране на оператори. Приятелски функции. Тип auto
+- [**Week 7**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week7/README.md) - Статични функции и променливи. Статични член-данни и член-функции. Дизайн патърни
