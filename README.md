@@ -2,7 +2,7 @@
 **Специалност:** **Софтуерно инженерство (СИ)** 🎓 <br>
 **Курс:** **I**  
 **Група:** **6**  
-**Зимен семестър, 2025 / 2026**
+**Летен семестър, 2025 / 2026**
 <hr style="border-width: 5px !important;">
 
 ## Съдържание
@@ -14,3 +14,4 @@
 - [**Week 6**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week6/README.md) - Предефиниране на оператори. Приятелски функции. Тип auto.
 - [**Week 7**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week7/README.md) - Статични функции и променливи. Статични член-данни и член-функции. Дизайн патърни.
 - [**Week 8**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week8/README.md) - Move семантики. Голямата шестица.
+- [**Week 9**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week9/README.md) - Масиви от указатели към обекти.
