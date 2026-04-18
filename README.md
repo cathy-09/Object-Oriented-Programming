@@ -1,4 +1,4 @@
-# 📚Object-Oriented-Programming
+(https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Object-Oriented-Programming&fontSize=54)
 **Специалност:** **Софтуерно инженерство (СИ)** 🎓 <br>
 **Курс:** **I**  
 **Група:** **6**  
