@@ -1,4 +1,4 @@
-(https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Object-Oriented-Programming&fontSize=54)
+![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Object-Oriented-Programming&fontSize=54&desc=•%20Encapsulation%20•%20Inheritance%20•%20Polymorphism&descSize=18&descAlignY=65)
 **Специалност:** **Софтуерно инженерство (СИ)** 🎓 <br>
 **Курс:** **I**  
 **Група:** **6**  
