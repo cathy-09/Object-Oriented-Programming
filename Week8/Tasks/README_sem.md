@@ -1550,7 +1550,7 @@ std::ostream& operator<<(std::ostream& os, const VehicleList& list)
 
 <hr style="border-width: 5px !important;">
 
-`tsk2.cpp`
+`task2.cpp`
 ```cpp
 #include "Registration.h"
 #include "Vehicle.h"
