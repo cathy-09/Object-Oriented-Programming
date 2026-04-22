@@ -16,3 +16,4 @@
 - [**Week 7**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week7/README.md) - Статични функции и променливи. Статични член-данни и член-функции. Дизайн патърни.
 - [**Week 8**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week8/README.md) - Move семантики. Голямата шестица.
 - [**Week 9**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week9/README.md) - Масиви от указатели към обекти.
+- [**Week 10**](https://github.com/cathy-09/Object-Oriented-Programming/blob/main/Week10/README.md) - Tемплейти и умни указатели.
