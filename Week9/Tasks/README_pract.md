@@ -339,6 +339,8 @@ Book* getBooksByGenre(Genre genre) - връща масивът с книгите
 Помислете - тук трябва deep copy или shallow copy?
 ```
 
+`Решение:`
+
 `Genre.h`
 ```h
 #pragma once
