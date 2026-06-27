@@ -31,10 +31,9 @@
 \definecolor{secbg}{HTML}{E3F2FD}
 \definecolor{secaccent}{HTML}{1565C0}
 
-% Зелени цветове за поленцата и заглавието
-\definecolor{greenprimary}{HTML}{1B5E20}  % Тъмно зелено за заглавието на поленцето
-\definecolor{greenaccent}{HTML}{2E7D32}   % Основно зелено за рамката и булетите
-\definecolor{greenhighlight}{HTML}{E8F5E9}% Светло зелено за фон на поленцето и акцент на заглавието
+\definecolor{greenprimary}{HTML}{1B5E20}
+\definecolor{greenaccent}{HTML}{2E7D32}
+\definecolor{greenhighlight}{HTML}{E8F5E9}
 
 \tcbset{
   categorybox/.style={
@@ -74,7 +73,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{\color{rulegray}\hrule width\headwidth height\headrulewidth}
 
-% Настройка на булетите в зелено
 \setlist[itemize,1]{
   label={\color{greenaccent}\faChevronRight},
   leftmargin=1.4em,
@@ -110,7 +108,6 @@
 
 \vspace{1.8cm}
 
-%ООП принципи
 \begin{tcolorbox}[categorybox, title={1.\ Основни принципи на ООП въпроси}]
 \begin{itemize}
   \item Абстракция — дефиниция; какво представлява; пример за абстракция
@@ -122,7 +119,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Класове и конструктори
 \begin{tcolorbox}[categorybox, title={2.\ Класове и конструктори}]
 \begin{itemize}
 \item Ключова дума \qtag{class}
@@ -145,7 +141,6 @@
 \nope{Параметри в деструктор — \textbf{не можем да подаваме} и деструкторът не хвърля изключения (може да се пита защо)!}
 \end{tcolorbox}
 
-%Деструктори
 \begin{tcolorbox}[categorybox, title={3.\ Деструктори}]
 \begin{itemize}
   \item Видове деструктори — \qtag{Default Destructor}, \qtag{Virtual Destructor}, \qtag{Pure Virtual Destructor}, \qtag{Deleted Destructor} 
@@ -162,7 +157,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Полиморфизъм и виртуални функции
 \begin{tcolorbox}[categorybox, title={4.\ Виртуални функции и полиморфизъм}]
 \begin{itemize}
   \item Разлика между \qtag{virtual} и \qtag{pure virtual} функции
@@ -174,7 +168,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Шаблони
 \begin{tcolorbox}[categorybox, title={5.\ Шаблони (Templates)}]
 \begin{itemize}
 \item Какво са Templates и какви проблеми решават и съответно какви проблеми създават
@@ -187,7 +180,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Умни указатели
 \begin{tcolorbox}[categorybox, title={6.\ Умни указатели (Smart Pointers)}]
 \begin{itemize}
   \item \qtag{unique\_ptr}
@@ -214,7 +206,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Ключови думи
 \begin{tcolorbox}[categorybox, title={ 7.\ Ключови думи}]
 \begin{multicols}{2}
 \begin{itemize}
@@ -232,7 +223,6 @@
 \nope{Ключова дума \qtag{auto} - имало е въпрос свързан с това, кога се разбира какъв реално е типа!}
 \end{tcolorbox}
 
-%move semantics
 \begin{tcolorbox}[categorybox, title={8.\ Move семантика и стойности}]
 \begin{itemize}
   \item lvalue и rvalue — разлика между двете
@@ -243,7 +233,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Изключения
 \begin{tcolorbox}[categorybox, title={9.\ Изключения}]
 \begin{itemize}
 \item Какво са exceptions и защо се използват?
@@ -254,7 +243,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%STL
 \begin{tcolorbox}[categorybox, title={10.\ STL типове и собствени имплементации}]
 \begin{multicols}{2}
 \begin{itemize}
@@ -269,7 +257,6 @@
 \end{multicols}
 \end{tcolorbox}
 
-% ДИЗАЙН ПРИНЦИПИ И ШАБЛОНИ
 \begin{tcolorbox}[categorybox, title={11.\ Дизайн принципи и шаблони}]
 \begin{itemize}
   \item \textbf{SOLID} — всичките пет принципа; 
@@ -280,7 +267,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%CAST, NAMESPACE, ENUM
 \begin{tcolorbox}[categorybox, title={12.\ Cast, Namespace, Enum, Lambda}]
 \begin{itemize}
   \item \qtag{dynamic\_cast} и \qtag{static\_cast} — основни разлики и употреба 
@@ -290,7 +276,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%13. ПАМЕТ И КОМПИЛАЦИЯ
 \begin{tcolorbox}[categorybox, title={13.\ Памет, компилация и свързване}]
 \begin{itemize}
   \item Heap и Stack — разлики в двата вида памет
@@ -301,7 +286,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%14.ПРАКТИЧЕСКИ ЗАДАЧИ
 \begin{tcolorbox}[categorybox, title={14.\ Практически задачи}]
 \begin{itemize}
   \item Имплементирайте \qtag{MyString}: \qtag{char*}, \qtag{size}, \qtag{capacity}, Rule of 5, \qtag{resize()}
@@ -312,7 +296,6 @@
 \end{itemize}
 \end{tcolorbox}
 
-%Footer note
 \vfill
 \begin{center}
   \color{subtitle}\small
