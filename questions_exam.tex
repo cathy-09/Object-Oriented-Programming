@@ -1,0 +1,322 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[bulgarian,english]{babel}
+\usepackage[top=2.2cm, bottom=2.2cm, left=2.4cm, right=2.4cm]{geometry}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\tcbuselibrary{skins, breakable, listings}
+
+\definecolor{primary}{HTML}{1A237E}
+\definecolor{accent}{HTML}{3949AB}
+\definecolor{highlight}{HTML}{E8EAF6}
+\definecolor{warning}{HTML}{E65100}
+\definecolor{warningbg}{HTML}{FFF3E0}
+\definecolor{codegray}{HTML}{F5F5F5}
+\definecolor{subtitle}{HTML}{546E7A}
+\definecolor{rulegray}{HTML}{B0BEC5}
+\definecolor{secbg}{HTML}{E3F2FD}
+\definecolor{secaccent}{HTML}{1565C0}
+
+% Зелени цветове за поленцата и заглавието
+\definecolor{greenprimary}{HTML}{1B5E20}  % Тъмно зелено за заглавието на поленцето
+\definecolor{greenaccent}{HTML}{2E7D32}   % Основно зелено за рамката и булетите
+\definecolor{greenhighlight}{HTML}{E8F5E9}% Светло зелено за фон на поленцето и акцент на заглавието
+
+\tcbset{
+  categorybox/.style={
+    enhanced, breakable,
+    colback=greenhighlight,
+    colframe=greenaccent,
+    colbacktitle=greenprimary,
+    coltitle=white,
+    fonttitle=\bfseries\large,
+    arc=6pt,
+    boxrule=1.2pt,
+    titlerule=0pt,
+    attach boxed title to top left={yshift=-3mm, xshift=8mm},
+    boxed title style={colframe=greenprimary, arc=4pt, boxrule=0.8pt},
+    left=8pt, right=8pt, top=10pt, bottom=6pt,
+    before skip=14pt, after skip=6pt,
+  },
+  warningbox/.style={
+    enhanced,
+    colback=warningbg,
+    colframe=warning,
+    arc=5pt,
+    boxrule=1pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+  },
+}
+
+\titleformat{\section}{\Large\bfseries\color{greenprimary}}
+  {\thesection}{0.8em}{}[\color{rulegray}\titlerule]
+\titlespacing{\section}{0pt}{18pt}{8pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{subtitle}ООП — Въпроси за изпит}
+\fancyhead[R]{\small\color{subtitle}C++}
+\fancyfoot[C]{\small\color{subtitle}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{rulegray}\hrule width\headwidth height\headrulewidth}
+
+% Настройка на булетите в зелено
+\setlist[itemize,1]{
+  label={\color{greenaccent}\faChevronRight},
+  leftmargin=1.4em,
+  itemsep=3pt,
+  parsep=0pt,
+}
+\setlist[itemize,2]{
+  label={\color{greenaccent!70!white}\faCircle[regular]},
+  leftmargin=1.8em,
+  itemsep=2pt,
+}
+
+\newcommand{\nope}[1]{%
+  \begin{tcolorbox}[warningbox]
+    \faExclamationTriangle\quad\textbf{\color{warning}Важно:} #1
+  \end{tcolorbox}%
+}
+\newcommand{\qtag}[1]{\texttt{\color{greenaccent}\small#1}}
+
+\begin{document}
+\selectlanguage{bulgarian}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[greenprimary] (current page.north west) rectangle
+    ([yshift=-3.6cm]current page.north east);
+  \node[anchor=west, white, font=\Huge\bfseries]
+    at ([xshift=2.4cm, yshift=-1.3cm]current page.north west)
+    {Въпроси по ООП — C++};
+  \node[anchor=west, greenhighlight!85!greenprimary, font=\large]
+    at ([xshift=2.4cm, yshift=-2.4cm]current page.north west)
+    {Въпроси от изпита лятна сесия за подготовка за изпит септемврийска сесия};
+\end{tikzpicture}
+
+\vspace{1.8cm}
+
+%ООП принципи
+\begin{tcolorbox}[categorybox, title={1.\ Основни принципи на ООП въпроси}]
+\begin{itemize}
+  \item Абстракция — дефиниция; какво представлява; пример за абстракция
+  \item Енкапсулация — дефиниция; ролята на модификаторите за достъп (\qtag{private}, \qtag{public}, \qtag{protected}) и защо са важни
+  \item Наследяване — разлика между \qtag{std} и наследяване 
+  \nope{Според мен не е разбран въпроса за \qtag{std} и наследяване, понеже \qtag{std} е библиотека!}
+  \item Наследяване \textbf{продължение} - дефиниция; ред на извикване на конструктори и деструктори в контекста на наследяването
+  \item Полиморфизъм — дефиниция; compile-time и runtime; конкретен пример като се използват шаблони, зададен от асистент (примерите са за малко по-висока оценка)
+\end{itemize}
+\end{tcolorbox}
+
+%Класове и конструктори
+\begin{tcolorbox}[categorybox, title={2.\ Класове и конструктори}]
+\begin{itemize}
+\item Ключова дума \qtag{class}
+  \item Видове конструктори — \qtag{Default Constructor}, \qtag{Parameterized Constructor}, \qtag{Copy Constructor}, \qtag{Move Constructor}, \qtag{Conversion Constructor / Explicit}, \qtag{$=$delete Constructor}, \qtag{Implicit Default Constructor}
+  \item Инициализиращ списък — какво представлява и какви са предимствата му пред това да инициализираме член-данните в scope-a
+  \item Explicit конструктор — кога го използваме и защо
+  \item Implicit конструктор — кога го използваме и защо
+  \item Инварианти на клас — какво представляват, примери за инварианти на клас
+  \item Указателят \qtag{this} — каква е неговата роля и за какво го използваме
+  \nope{(За по-висока оценка) Как е имплементиран, как се възприема от компилатора!}
+  \item Модификаторите за достъп (\qtag{private}, \qtag{public}, \qtag{protected}) при наследяване — кога се ползват и какво прави всеки един от тях
+  \item Агрегация и Композиция — основни разлики, кой указател се ползва при всяка (raw pointer при агрегация)
+  \item Pед на извикване на конструктори и деструктори
+  \item Освобождаване на памет - ръчно и чрез STL контейнери, разлики
+  \item \textbf{Rule of 3 / Rule of 5} — кога се имплементират, какво представляват (какво съдържат)
+\end{itemize}
+
+\nope{Виртуален конструктор — \textbf{не съществува} в C++!}
+\nope{Ключова дума \texttt{interface} — \textbf{не съществува} в C++!}
+\nope{Параметри в деструктор — \textbf{не можем да подаваме} и деструкторът не хвърля изключения (може да се пита защо)!}
+\end{tcolorbox}
+
+%Деструктори
+\begin{tcolorbox}[categorybox, title={3.\ Деструктори}]
+\begin{itemize}
+  \item Видове деструктори — \qtag{Default Destructor}, \qtag{Virtual Destructor}, \qtag{Pure Virtual Destructor}, \qtag{Deleted Destructor} 
+  \item Виртуален деструктор \qtag{Virtual Destructor} — защо ни е нужен, кога се ползва
+  \item Private / protected деструктор — какво се случва при опит за създаване в \qtag{main}
+  \nope{%
+  Сценарии: \\
+  1. Създаване на обекта на стека \\
+  2. Създаване на обекта в динамичната памет%
+  }
+  \item Как да избегнем double deletion
+  \item RAII — какво е RAII, примери за RAII
+  \item RVO — какво е RVO, примери за RVO
+\end{itemize}
+\end{tcolorbox}
+
+%Полиморфизъм и виртуални функции
+\begin{tcolorbox}[categorybox, title={4.\ Виртуални функции и полиморфизъм}]
+\begin{itemize}
+  \item Разлика между \qtag{virtual} и \qtag{pure virtual} функции
+  \item Виртуална таблица (vtable) — как изглежда, какво представлява
+  \nope{Виртуална таблица — някои асистенти разписват класове и фукции и се иска да се каже как изглежда виртуалната таблица}
+  \item Object slicing — какво е оbject slicing, защо е проблем оbject slicing-а
+  \item Override и overload на функции — разлика между оverride и overload на функции, примери за оverride и overload на функции
+  \item Абстракция и интерфейси в C++
+\end{itemize}
+\end{tcolorbox}
+
+%Шаблони
+\begin{tcolorbox}[categorybox, title={5.\ Шаблони (Templates)}]
+\begin{itemize}
+\item Какво са Templates и какви проблеми решават и съответно какви проблеми създават
+  \item Шаблонна специализация — примери и какво представлява
+  \item За шаблоните асистент е питал, ако имаме някакъв оператор и направим шаблон и някакъв оператор примерно, който не е дефиниран за даден тип, ако се опитаме да го извикаме с този тип какво се случва - грешка.
+  \item Написана е била шаблонна фукция на дъската и \qtag{f(string)}, \qtag{f(int)}, \qtag{f(double)} — питано е било какво се случва в този конкретен пример
+  \item Concepts — какво са сoncepts и за какво служат
+  \item Compile-time полиморфизъм — искало се е конкретен пример с шаблони
+  \item SFINAE — какво представлява и кое е по-доброто
+\end{itemize}
+\end{tcolorbox}
+
+%Умни указатели
+\begin{tcolorbox}[categorybox, title={6.\ Умни указатели (Smart Pointers)}]
+\begin{itemize}
+  \item \qtag{unique\_ptr}
+    \begin{itemize}
+    \item Дефиниция и какво представлява (Ownership)
+      \item Имплементация от нулата, как бихме си направили наш \qtag{unique\_ptr}
+      \item Защо copy constructor и \qtag{operator$=$} са \qtag{$=$delete}
+      \item Разлика между \qtag{unique\_ptr} и \qtag{shared\_ptr} относно \qtag{use\_count}
+    \end{itemize}
+  \item \qtag{shared\_ptr}
+    \begin{itemize}
+     \item Дефиниция и какво представлява (Ownership)
+      \item Control block и reference count — какво са control block и reference count, къде в паметта се пазят control block и reference count
+      \item Use count — как работи
+    \end{itemize}
+  \item \qtag{weak\_ptr}
+    \begin{itemize}
+    \item Дефиниция и какво представлява (Ownership)
+      \item За какво се ползва
+      \item Разлики от \qtag{shared\_ptr}
+    \end{itemize}
+  \item Ownership — какво означава и как ни помага
+  \item Raw pointer при агрегация — кога и защо се използва
+\end{itemize}
+\end{tcolorbox}
+
+%Ключови думи
+\begin{tcolorbox}[categorybox, title={ 7.\ Ключови думи}]
+\begin{multicols}{2}
+\begin{itemize}
+\item Ключова дума \qtag{class}
+  \item Ключова дума \qtag{const} в началото и в края на функция
+  \item Ключова дума \qtag{const} променлива
+  \item Ключова дума \qtag{static} — член-данни и функции
+  \item Ключова дума \qtag{mutable} - какво представлява
+  \item Ключова дума \qtag{auto} - какво представлява
+  \item Ключова дума \qtag{decltype} — разлика с \qtag{auto}
+  \item Ключова дума \qtag{friend} - какво представлява
+  \item Ключова дума \qtag{explicit} - какво представлява
+\end{itemize}
+\end{multicols}
+\nope{Ключова дума \qtag{auto} - имало е въпрос свързан с това, кога се разбира какъв реално е типа!}
+\end{tcolorbox}
+
+%move semantics
+\begin{tcolorbox}[categorybox, title={8.\ Move семантика и стойности}]
+\begin{itemize}
+  \item lvalue и rvalue — разлика между двете
+  \item rvalue reference (\qtag{\&\&}) - какво представлява
+  \item \qtag{std::move} и move semantics - какво представляват и кога се използват
+  \item \qtag{std::forward} (perfect forwarding)
+  \item Живот на обект — какво представлява понятието
+\end{itemize}
+\end{tcolorbox}
+
+%Изключения
+\begin{tcolorbox}[categorybox, title={9.\ Изключения}]
+\begin{itemize}
+\item Какво са exceptions и защо се използват?
+\item Какво e stack unwinding?
+  \item Видове exceptions
+  \item Нива на exception safety (\qtag{No-throw}, \qtag{Strong}, \qtag{Basic}, \qtag{No guarantee})
+  \item Кoe e по-добро от exceptions и защо? (Hint: \qtag{std::expected})
+\end{itemize}
+\end{tcolorbox}
+
+%STL
+\begin{tcolorbox}[categorybox, title={10.\ STL типове и собствени имплементации}]
+\begin{multicols}{2}
+\begin{itemize}
+  \item \qtag{std::string} и \qtag{char*} - кое е по-добро, защо и как бихме си имплементирали myString?
+  \nope{За собствената имплементация: Трябва класът да има char*, size, capacity, rule of 5, resize функция!}
+  \item \qtag{std::vector} и \qtag{std::list} — кога кое ще използваме? Предимства и недостатъци
+  \item \qtag{std::optional} - Какво представлява? Предимства и недостатъци
+  \item \qtag{std::expected} - Какво представлява? Предимства и недостатъци
+  \item \qtag{std::variant} - Какво представлява? Предимства и недостатъци
+  \item \qtag{std::tuple} - Какво представлява? Предимства и недостатъци
+\end{itemize}
+\end{multicols}
+\end{tcolorbox}
+
+% ДИЗАЙН ПРИНЦИПИ И ШАБЛОНИ
+\begin{tcolorbox}[categorybox, title={11.\ Дизайн принципи и шаблони}]
+\begin{itemize}
+  \item \textbf{SOLID} — всичките пет принципа; 
+  \item \qtag{S} от \qtag{SOLID} (Single Responsibility) по-подробно
+  \item \textbf{Builder pattern} — какво представлява, примери
+  \item \textbf{Prototype design pattern} — какво представлява, примери
+  \item \textbf{Singleton} — какво представлява, примери, как се имплементира, какви ограничения налага
+\end{itemize}
+\end{tcolorbox}
+
+%CAST, NAMESPACE, ENUM
+\begin{tcolorbox}[categorybox, title={12.\ Cast, Namespace, Enum, Lambda}]
+\begin{itemize}
+  \item \qtag{dynamic\_cast} и \qtag{static\_cast} — основни разлики и употреба 
+  \item \qtag{namespace} — какво представлява, с какво е полезно
+  \item \qtag{enum} и \qtag{enum class} — основни разлики и употреба
+  \item Lambda функции — какво представлява, какво означават \texttt{[=]}, \texttt{[\&]}, подаване по стойност в Lambda функции
+\end{itemize}
+\end{tcolorbox}
+
+%13. ПАМЕТ И КОМПИЛАЦИЯ
+\begin{tcolorbox}[categorybox, title={13.\ Памет, компилация и свързване}]
+\begin{itemize}
+  \item Heap и Stack — разлики в двата вида памет
+  \item Разделна компилация — да се обясни целият процес (preprocessor → compiler → linker)
+  \item Задача с linker грешка — да се разпознае и да се даде обяснение
+  \item Предефиниране на оператори (\textit{operator overloading})
+  \item оператор spaceship \qtag{$<=>$} - защо го използваме, какво спестява и какво означава да е $=$default
+\end{itemize}
+\end{tcolorbox}
+
+%14.ПРАКТИЧЕСКИ ЗАДАЧИ
+\begin{tcolorbox}[categorybox, title={14.\ Практически задачи}]
+\begin{itemize}
+  \item Имплементирайте \qtag{MyString}: \qtag{char*}, \qtag{size}, \qtag{capacity}, Rule of 5, \qtag{resize()}
+  \item Имплементирайте \qtag{unique\_ptr}
+  \item Нарисувайте vtable за дадена йерархия от класове
+  \item Дадена е шаблонна функция + \qtag{f(string)}/\qtag{f(int)}/\qtag{f(double)} — какво ще се извиква
+  \item Задача с linker грешка — намерете и обяснете грешката
+\end{itemize}
+\end{tcolorbox}
+
+%Footer note
+\vfill
+\begin{center}
+  \color{subtitle}\small
+  \faInfoCircle\quad Всички въпроси са събрани от реални изпити. Мога да изпратя и разписана теория от лекции. Акцентирайте върху \textbf{практическите примери}.
+\end{center}
+
+\end{document}
